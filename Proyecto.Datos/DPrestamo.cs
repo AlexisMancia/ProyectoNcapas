@@ -64,7 +64,7 @@ namespace Proyecto.Datos
             }
         }
 
-        public String Existe(string Valor, string Valor2)
+        public String Existe(int Valor, int Valor2)
         {
             string Rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -73,8 +73,8 @@ namespace Proyecto.Datos
                 SqlCon = Conexion.getInstancia().CrearConexion();
                 SqlCommand Comando = new SqlCommand("prestamo_existe", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = Valor;
-                Comando.Parameters.Add("@valor2", SqlDbType.VarChar).Value = Valor2;
+                Comando.Parameters.Add("@valor", SqlDbType.Int).Value = Valor;
+                Comando.Parameters.Add("@valor2", SqlDbType.Int).Value = Valor2;
                 SqlParameter ParExiste = new SqlParameter();
                 ParExiste.ParameterName = "@existe";
                 ParExiste.SqlDbType = SqlDbType.Int;
@@ -157,7 +157,7 @@ namespace Proyecto.Datos
             return Rpta;
         }
 
-        public string Eliminar(int Id)
+        public string Eliminar(int IdLibro,int IdPersona)
         {
             string Rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -167,8 +167,8 @@ namespace Proyecto.Datos
                 SqlCommand Comando = new SqlCommand("prestamo_eliminar", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
 
-                Comando.Parameters.Add("@idlibro", SqlDbType.Int).Value = Id;
-                Comando.Parameters.Add("@idpersona", SqlDbType.Int).Value = Id;
+                Comando.Parameters.Add("@idlibro", SqlDbType.Int).Value = IdLibro;
+                Comando.Parameters.Add("@idpersona", SqlDbType.Int).Value = IdPersona;
                
                
                 SqlCon.Open();
