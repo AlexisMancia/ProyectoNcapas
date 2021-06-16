@@ -83,5 +83,17 @@ namespace Proyecto.Negocio
             DLibro Datos = new DLibro();
             return Datos.Eliminar(Id);
         }
+
+        public static string Activar(int IdLibro)
+        {
+            DLibro Datos = new DLibro();
+            return Datos.Activar(IdLibro);
+        }
+
+        public static string Desactivar(int IdLibro)
+        {
+            DLibro Datos = new DLibro();
+            return Datos.Desactivar(IdLibro);
+        }
     }
 }

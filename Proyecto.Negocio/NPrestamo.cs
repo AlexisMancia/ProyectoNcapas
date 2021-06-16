@@ -69,5 +69,11 @@ namespace Proyecto.Negocio
             DPrestamo Datos = new DPrestamo();
             return Datos.Eliminar(IdLibro,IdPersona);
         }
+
+        public static string Desactivar(int IdLibro, int IdPersona)
+        {
+            DPrestamo Datos = new DPrestamo();
+            return Datos.Desactivar(IdLibro,IdPersona);
+        }
     }
 }
