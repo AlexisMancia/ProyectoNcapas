@@ -1,0 +1,6 @@
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Entidades\bin\Debug\Proyecto.Entidades.dll
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Entidades\bin\Debug\Proyecto.Entidades.pdb
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Entidades\obj\Debug\Proyecto.Entidades.csproj.AssemblyReference.cache
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Entidades\obj\Debug\Proyecto.Entidades.csproj.CoreCompileInputs.cache
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Entidades\obj\Debug\Proyecto.Entidades.dll
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Entidades\obj\Debug\Proyecto.Entidades.pdb

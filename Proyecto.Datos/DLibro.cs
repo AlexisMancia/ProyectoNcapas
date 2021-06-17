@@ -63,8 +63,9 @@ namespace Proyecto.Datos
             }
         }
 
-        public String Existe(string Valor, string Valor2)
+        public String Existe(int IdLibro)
         {
+      
             string Rpta = "";
             SqlConnection SqlCon = new SqlConnection();
             try
@@ -72,8 +73,7 @@ namespace Proyecto.Datos
                 SqlCon = Conexion.getInstancia().CrearConexion();
                 SqlCommand Comando = new SqlCommand("libro_existe", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = Valor;
-                Comando.Parameters.Add("@valor2", SqlDbType.VarChar).Value = Valor2;
+                Comando.Parameters.Add("@valor", SqlDbType.Int).Value = IdLibro;
                 SqlParameter ParExiste = new SqlParameter();
                 ParExiste.ParameterName = "@existe";
                 ParExiste.SqlDbType = SqlDbType.Int;
@@ -141,6 +141,7 @@ namespace Proyecto.Datos
                 SqlCommand Comando = new SqlCommand("libro_actualizar", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@IdLibro", SqlDbType.Int).Value = Obj.IdLibro;
                 Comando.Parameters.Add("@isbm", SqlDbType.VarChar).Value = Obj.ISBM;
                 Comando.Parameters.Add("@titulo", SqlDbType.VarChar).Value = Obj.Titulo;
                 Comando.Parameters.Add("@autor", SqlDbType.VarChar).Value = Obj.Autor;

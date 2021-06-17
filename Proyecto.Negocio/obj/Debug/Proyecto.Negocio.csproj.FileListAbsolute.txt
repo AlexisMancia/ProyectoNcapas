@@ -1,0 +1,11 @@
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Negocio\bin\Debug\Proyecto.Negocio.dll
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Negocio\bin\Debug\Proyecto.Negocio.pdb
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Negocio\bin\Debug\Proyecto.Datos.dll
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Negocio\bin\Debug\Proyecto.Entidades.dll
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Negocio\bin\Debug\Proyecto.Datos.pdb
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Negocio\bin\Debug\Proyecto.Entidades.pdb
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Negocio\obj\Debug\Proyecto.Negocio.csproj.AssemblyReference.cache
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Negocio\obj\Debug\Proyecto.Negocio.csproj.CoreCompileInputs.cache
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Negocio\obj\Debug\Proyecto.Negocio.csproj.CopyComplete
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Negocio\obj\Debug\Proyecto.Negocio.dll
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Negocio\obj\Debug\Proyecto.Negocio.pdb

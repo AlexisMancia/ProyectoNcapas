@@ -23,10 +23,10 @@ namespace Proyecto.Negocio
             return Datos.Buscar(Valor);
         }
 
-        public static string Insertar(string Titulo, string Autor, string ISBM, string Editorial, string AnioEdicion, string NumeroEdicion, string Pais, string Idioma, string Materia,string NumeroPaginas, string UbicacionEstante, string Descripcion)
+        public static string Insertar(int IdLibro,string Titulo, string Autor, string ISBM, string Editorial, string AnioEdicion, string NumeroEdicion, string Pais, string Idioma, string Materia,string NumeroPaginas, string UbicacionEstante, string Descripcion)
         {
             DLibro Datos = new DLibro();
-            string Existe = Datos.Existe(Titulo, Autor);
+            string Existe = Datos.Existe(IdLibro);
             if (Existe.Equals(1))
             {
                 return "El libro ya existe";
@@ -50,13 +50,15 @@ namespace Proyecto.Negocio
             }
         }
 
-        public static string Actualizar(string Titulo, string Autor, string ISBM, string Editorial, string AnioEdicion, string NumeroEdicion, string Pais, string Idioma, string Materia, string NumeroPaginas, string UbicacionEstante, string Descripcion,bool Estado)
+        public static string Actualizar(int IdLibro,string Titulo, string Autor, string ISBM, string Editorial, string AnioEdicion, string NumeroEdicion, string Pais, string Idioma, string Materia, string NumeroPaginas, string UbicacionEstante, string Descripcion,bool Estado)
         {
+        
             DLibro Datos = new DLibro();
-            string Existe = Datos.Existe(Titulo, Autor);
-            if (Existe.Equals(1))
+            string Existe = Datos.Existe(IdLibro);
+            if (Existe.Equals("1"))
             {
                 Libro Obj = new Libro();
+                Obj.IdLibro = IdLibro;
                 Obj.Titulo = Titulo;
                 Obj.Autor = Autor;
                 Obj.ISBM = ISBM;

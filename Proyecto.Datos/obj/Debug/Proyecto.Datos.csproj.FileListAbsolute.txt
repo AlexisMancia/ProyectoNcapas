@@ -1,0 +1,9 @@
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Datos\bin\Debug\Proyecto.Datos.dll
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Datos\bin\Debug\Proyecto.Datos.pdb
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Datos\bin\Debug\Proyecto.Entidades.dll
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Datos\bin\Debug\Proyecto.Entidades.pdb
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Datos\obj\Debug\Proyecto.Datos.csproj.AssemblyReference.cache
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Datos\obj\Debug\Proyecto.Datos.csproj.CoreCompileInputs.cache
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Datos\obj\Debug\Proyecto.Datos.csproj.CopyComplete
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Datos\obj\Debug\Proyecto.Datos.dll
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Datos\obj\Debug\Proyecto.Datos.pdb
