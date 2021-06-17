@@ -44,6 +44,7 @@ namespace Proyecto.Presentacion
             this.btnActivar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.dgvLibro = new System.Windows.Forms.DataGridView();
+            this.Seleccionar2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -74,7 +75,7 @@ namespace Proyecto.Presentacion
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Seleccionar2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.cbSeleccionar = new System.Windows.Forms.CheckBox();
             this.tabGeneral.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibro1)).BeginInit();
@@ -169,6 +170,7 @@ namespace Proyecto.Presentacion
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cbSeleccionar);
             this.tabPage2.Controls.Add(this.btnEliminar);
             this.tabPage2.Controls.Add(this.btnDesactivar);
             this.tabPage2.Controls.Add(this.btnActivar);
@@ -230,6 +232,7 @@ namespace Proyecto.Presentacion
             this.btnDesactivar.TabIndex = 33;
             this.btnDesactivar.Text = "Desactivar";
             this.btnDesactivar.UseVisualStyleBackColor = true;
+            this.btnDesactivar.Click += new System.EventHandler(this.btnDesactivar_Click);
             // 
             // btnActivar
             // 
@@ -239,6 +242,7 @@ namespace Proyecto.Presentacion
             this.btnActivar.TabIndex = 32;
             this.btnActivar.Text = "Activar";
             this.btnActivar.UseVisualStyleBackColor = true;
+            this.btnActivar.Click += new System.EventHandler(this.btnActivar_Click);
             // 
             // btnActualizar
             // 
@@ -260,7 +264,13 @@ namespace Proyecto.Presentacion
             this.dgvLibro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLibro.Size = new System.Drawing.Size(750, 191);
             this.dgvLibro.TabIndex = 30;
+            this.dgvLibro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibro_CellContentClick_1);
             this.dgvLibro.DoubleClick += new System.EventHandler(this.dgvLibro2_DoubleClick);
+            // 
+            // Seleccionar2
+            // 
+            this.Seleccionar2.HeaderText = "Seleccionar2";
+            this.Seleccionar2.Name = "Seleccionar2";
             // 
             // txtEstado
             // 
@@ -505,10 +515,16 @@ namespace Proyecto.Presentacion
             // 
             this.errorIcono.ContainerControl = this;
             // 
-            // Seleccionar2
+            // cbSeleccionar
             // 
-            this.Seleccionar2.HeaderText = "Seleccionar2";
-            this.Seleccionar2.Name = "Seleccionar2";
+            this.cbSeleccionar.AutoSize = true;
+            this.cbSeleccionar.Location = new System.Drawing.Point(844, 421);
+            this.cbSeleccionar.Name = "cbSeleccionar";
+            this.cbSeleccionar.Size = new System.Drawing.Size(76, 17);
+            this.cbSeleccionar.TabIndex = 35;
+            this.cbSeleccionar.Text = "Selecionar";
+            this.cbSeleccionar.UseVisualStyleBackColor = true;
+            this.cbSeleccionar.CheckedChanged += new System.EventHandler(this.cbSeleccionar_CheckedChanged);
             // 
             // FrmLibro
             // 
@@ -578,5 +594,6 @@ namespace Proyecto.Presentacion
         private System.Windows.Forms.Button btnActivar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar2;
+        private System.Windows.Forms.CheckBox cbSeleccionar;
     }
 }

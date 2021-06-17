@@ -17,6 +17,12 @@ namespace Proyecto.Negocio
             return Datos.Listar();
         }
 
+        public static DataTable ListarDisponible()
+        {
+            DLibro Datos = new DLibro();
+            return Datos.ListarDisponibles();
+        }
+
         public static DataTable Buscar(string Valor)
         {
             DLibro Datos = new DLibro();

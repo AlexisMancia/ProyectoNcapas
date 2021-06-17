@@ -135,5 +135,12 @@ namespace Proyecto.Presentacion
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void prestamoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPrestamo frm = new FrmPrestamo();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
