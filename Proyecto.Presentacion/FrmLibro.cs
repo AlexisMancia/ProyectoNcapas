@@ -13,7 +13,7 @@ namespace Proyecto.Presentacion
 {
     public partial class FrmLibro : Form
     {
-        private string TituloAnt;
+ 
         public FrmLibro()
         {
             InitializeComponent();
@@ -95,7 +95,6 @@ namespace Proyecto.Presentacion
             MessageBox.Show(Mensaje, "Libros ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-
         private void FrmLibro_Load(object sender, EventArgs e)
         {
             this.Listar();
@@ -104,16 +103,6 @@ namespace Proyecto.Presentacion
         private void btnBuscarLibro_Click(object sender, EventArgs e)
         {
             this.Buscar();
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
@@ -163,26 +152,6 @@ namespace Proyecto.Presentacion
         {
             this.Limpiar();
             tabGeneral.SelectedIndex = 0;
-        }
-
-        private void dgvLibro_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvLibro_DoubleClick(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void dgvLibro2_DoubleClick(object sender, EventArgs e)

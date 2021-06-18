@@ -37,6 +37,33 @@ namespace Proyecto.Datos
 
         }
 
+        public DataTable ListarPrestamoProfesor(int IdProfesor)
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("prestamo_listar_profesor", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@valor", SqlDbType.Int).Value = IdProfesor;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+
+        }
+
         public DataTable Buscar(string Valor,string Valor2)
         {
             SqlDataReader Resultado;
@@ -223,7 +250,7 @@ namespace Proyecto.Datos
                 Comando.Parameters.Add("@IdLibro", SqlDbType.Int).Value = IdLibro;
                 Comando.Parameters.Add("@IdPersona", SqlDbType.Int).Value = IdPersona;
                 SqlCon.Open();
-                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se pudo Desactivar el registro";
+                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se pudo Desactivar el prestamo";
 
             }
             catch (Exception ex)

@@ -16,3 +16,5 @@ D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Presentacion\obj\Debug\Proyecto.Presen
 D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.exe
 D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.pdb
 D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.FrmLibro.resources
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.FrmPrestamo.resources
+D:\ProyectoNCapas\ProyectoNCapas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.FrmDevolucion.resources

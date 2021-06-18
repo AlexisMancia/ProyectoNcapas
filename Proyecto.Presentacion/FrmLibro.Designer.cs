@@ -39,6 +39,7 @@ namespace Proyecto.Presentacion
             this.dgvLibro1 = new System.Windows.Forms.DataGridView();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbSeleccionar = new System.Windows.Forms.CheckBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnDesactivar = new System.Windows.Forms.Button();
             this.btnActivar = new System.Windows.Forms.Button();
@@ -75,7 +76,6 @@ namespace Proyecto.Presentacion
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cbSeleccionar = new System.Windows.Forms.CheckBox();
             this.tabGeneral.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibro1)).BeginInit();
@@ -157,10 +157,8 @@ namespace Proyecto.Presentacion
             this.dgvLibro1.ReadOnly = true;
             this.dgvLibro1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLibro1.ShowRowErrors = false;
-            this.dgvLibro1.Size = new System.Drawing.Size(963, 299);
+            this.dgvLibro1.Size = new System.Drawing.Size(963, 432);
             this.dgvLibro1.TabIndex = 0;
-            this.dgvLibro1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibro_CellContentClick);
-            this.dgvLibro1.DoubleClick += new System.EventHandler(this.dgvLibro_DoubleClick);
             // 
             // Seleccionar
             // 
@@ -212,7 +210,17 @@ namespace Proyecto.Presentacion
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // cbSeleccionar
+            // 
+            this.cbSeleccionar.AutoSize = true;
+            this.cbSeleccionar.Location = new System.Drawing.Point(844, 421);
+            this.cbSeleccionar.Name = "cbSeleccionar";
+            this.cbSeleccionar.Size = new System.Drawing.Size(76, 17);
+            this.cbSeleccionar.TabIndex = 35;
+            this.cbSeleccionar.Text = "Selecionar";
+            this.cbSeleccionar.UseVisualStyleBackColor = true;
+            this.cbSeleccionar.CheckedChanged += new System.EventHandler(this.cbSeleccionar_CheckedChanged);
             // 
             // btnEliminar
             // 
@@ -493,7 +501,6 @@ namespace Proyecto.Presentacion
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Autor";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtTitulo
             // 
@@ -514,17 +521,6 @@ namespace Proyecto.Presentacion
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
-            // 
-            // cbSeleccionar
-            // 
-            this.cbSeleccionar.AutoSize = true;
-            this.cbSeleccionar.Location = new System.Drawing.Point(844, 421);
-            this.cbSeleccionar.Name = "cbSeleccionar";
-            this.cbSeleccionar.Size = new System.Drawing.Size(76, 17);
-            this.cbSeleccionar.TabIndex = 35;
-            this.cbSeleccionar.Text = "Selecionar";
-            this.cbSeleccionar.UseVisualStyleBackColor = true;
-            this.cbSeleccionar.CheckedChanged += new System.EventHandler(this.cbSeleccionar_CheckedChanged);
             // 
             // FrmLibro
             // 

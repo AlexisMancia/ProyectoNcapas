@@ -17,6 +17,12 @@ namespace Proyecto.Negocio
             return Datos.Listar();
         }
 
+        public static DataTable ListarPrestamoProfesor(int IdPersona)
+        {
+            DPrestamo Datos = new DPrestamo();
+            return Datos.ListarPrestamoProfesor(IdPersona);
+        }
+
         public static DataTable Buscar(string Valor, string Valor2)
         {
             DPrestamo Datos = new DPrestamo();

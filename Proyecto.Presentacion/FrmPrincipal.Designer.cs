@@ -94,7 +94,7 @@ namespace Proyecto.Presentacion
             // mantenimientoToolStripMenuItem
             // 
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
-            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
             this.mantenimientoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem_Click);
             // 
@@ -269,7 +269,6 @@ namespace Proyecto.Presentacion
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
-            this.toolStripStatusLabel.Click += new System.EventHandler(this.toolStripStatusLabel_Click);
             // 
             // toolStrip1
             // 

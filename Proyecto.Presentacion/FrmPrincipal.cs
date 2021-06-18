@@ -109,26 +109,6 @@ namespace Proyecto.Presentacion
 
         }
 
-        private void fileMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void devolucionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ingresarLibroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripStatusLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmLibro frm = new FrmLibro();
@@ -140,6 +120,12 @@ namespace Proyecto.Presentacion
         {
             FrmPrestamo frm = new FrmPrestamo();
             frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void devolucionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDevolucion frm = new FrmDevolucion();
             frm.Show();
         }
     }
