@@ -14,6 +14,11 @@ namespace Proyecto.Entidades
         public string Telefono { get; set; }
         public int Edad { get; set; }
         public int IdRol { get; set; }
+        public string Email { get; set; }
+        public string Clave { get; set; }
+        public string Estado { get; set; }
+
+
 
     }
 }

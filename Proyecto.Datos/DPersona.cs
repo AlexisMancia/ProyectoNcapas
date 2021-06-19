@@ -105,6 +105,9 @@ namespace Proyecto.Datos
                 Comando.Parameters.Add("@apellido", SqlDbType.VarChar).Value = Obj.Apellido;
                 Comando.Parameters.Add("@telefono", SqlDbType.VarChar).Value = Obj.Telefono;
                 Comando.Parameters.Add("@edad", SqlDbType.Int).Value = Obj.Edad;
+                Comando.Parameters.Add("@email", SqlDbType.VarChar).Value = Obj.Email;
+                Comando.Parameters.Add("@clave", SqlDbType.VarChar).Value = Obj.Clave;
+
                 SqlCon.Open();
                 Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se pudo ingresar el registro";
 
@@ -174,6 +177,33 @@ namespace Proyecto.Datos
             return Rpta;
         }
 
+        public DataTable Login(string Email, string Clave)
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("persona_login", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@email", SqlDbType.VarChar).Value = Email;
+                Comando.Parameters.Add("@clave", SqlDbType.VarChar).Value = Clave;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+            }
+            catch (Exception ex)
+            {
+                return null;
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+        }
 
     }
 }

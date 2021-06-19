@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto.Negocio;
 
 namespace Proyecto.Presentacion
 {
     public partial class FrmPrincipal : Form
     {
         private int childFormNumber = 0;
-
+        public int IdUsuario, IdRol;
+        public string Nombre, Rol;
+        public bool Estado;
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -106,12 +109,13 @@ namespace Proyecto.Presentacion
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-
+            menuStrip.Enabled = false;
         }
 
         private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmLibro frm = new FrmLibro();
+            frm.rol = this.Rol;
             frm.MdiParent = this;
             frm.Show();
         }
@@ -127,6 +131,90 @@ namespace Proyecto.Presentacion
         {
             FrmDevolucion frm = new FrmDevolucion();
             frm.Show();
+        }
+
+        private void regisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRegistro frm = new FrmRegistro();
+            frm.Show();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtClave.Clear();
+            txtEmail.Clear();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.IdUsuario = 0;
+            this.IdRol = 0;
+            this.Rol = "";
+            this.Nombre = "";
+            this.Estado = false;
+            grpboxLogin.Visible = true;
+            menuStrip.Enabled = false;
+            txtClave.Clear();
+            txtEmail.Clear();
+            lblLogged.Visible = false;
+
+        }
+
+        private void txtClave_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if(txtEmail.Text != string.Empty && txtClave.Text != string.Empty)
+            {
+
+                try
+                {
+                    NPersona persona = new NPersona();
+                    DataTable Tabla = new DataTable();
+                    Tabla = persona.Login(txtEmail.Text.Trim(), txtClave.Text.Trim());
+                    if (Tabla.Rows.Count<=0)
+                    {
+                        MessageBox.Show("Credenciales incorrectas","Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        this.IdUsuario = Convert.ToInt32(Tabla.Rows[0][0]);
+                        this.IdRol = Convert.ToInt32(Tabla.Rows[0][1]);
+                        this.Rol = Convert.ToString(Tabla.Rows[0][2]);
+                        this.Nombre = Convert.ToString(Tabla.Rows[0][3]);
+                        this.Estado = Convert.ToBoolean(Tabla.Rows[0][4]);
+                        grpboxLogin.Visible = false;
+                        lblLogged.Visible = true;
+                        lblLogged.Text = "Logueado como " + Nombre;
+                        if (this.Rol.Equals("Administrador"))
+                        {
+                            menuStrip.Enabled = true;
+                        }
+                        else
+                        {
+                            if (this.Rol.Equals("Profesor"))
+                            {
+                                menuStrip.Enabled = true;
+                                mnuItemPrestamo.Enabled = false;
+                                mnuItemDevolucion.Enabled = false;
+                                mnuItemReporte.Enabled = false;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Faltan datos", "Acceso al sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -34,9 +34,9 @@ namespace Proyecto.Presentacion
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.libroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.prestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.devolucionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.regisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemPrestamo = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemDevolucion = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemReporte = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.newWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,23 +55,27 @@ namespace Proyecto.Presentacion
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblLogged = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.grpboxLogin = new System.Windows.Forms.GroupBox();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.grpboxLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.libroToolStripMenuItem,
-            this.prestamoToolStripMenuItem,
-            this.devolucionToolStripMenuItem,
-            this.regisToolStripMenuItem,
+            this.mnuItemPrestamo,
+            this.mnuItemDevolucion,
+            this.mnuItemReporte,
             this.windowsMenu,
             this.viewMenu,
             this.helpMenu,
@@ -98,25 +102,26 @@ namespace Proyecto.Presentacion
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
             this.mantenimientoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem_Click);
             // 
-            // prestamoToolStripMenuItem
+            // mnuItemPrestamo
             // 
-            this.prestamoToolStripMenuItem.Name = "prestamoToolStripMenuItem";
-            this.prestamoToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.prestamoToolStripMenuItem.Text = "Prestamo";
-            this.prestamoToolStripMenuItem.Click += new System.EventHandler(this.prestamoToolStripMenuItem_Click);
+            this.mnuItemPrestamo.Name = "mnuItemPrestamo";
+            this.mnuItemPrestamo.Size = new System.Drawing.Size(69, 20);
+            this.mnuItemPrestamo.Text = "Prestamo";
+            this.mnuItemPrestamo.Click += new System.EventHandler(this.prestamoToolStripMenuItem_Click);
             // 
-            // devolucionToolStripMenuItem
+            // mnuItemDevolucion
             // 
-            this.devolucionToolStripMenuItem.Name = "devolucionToolStripMenuItem";
-            this.devolucionToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.devolucionToolStripMenuItem.Text = "Devolucion";
-            this.devolucionToolStripMenuItem.Click += new System.EventHandler(this.devolucionToolStripMenuItem_Click);
+            this.mnuItemDevolucion.Name = "mnuItemDevolucion";
+            this.mnuItemDevolucion.Size = new System.Drawing.Size(79, 20);
+            this.mnuItemDevolucion.Text = "Devolucion";
+            this.mnuItemDevolucion.Click += new System.EventHandler(this.devolucionToolStripMenuItem_Click);
             // 
-            // regisToolStripMenuItem
+            // mnuItemReporte
             // 
-            this.regisToolStripMenuItem.Name = "regisToolStripMenuItem";
-            this.regisToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.regisToolStripMenuItem.Text = "Reporte";
+            this.mnuItemReporte.Name = "mnuItemReporte";
+            this.mnuItemReporte.Size = new System.Drawing.Size(60, 20);
+            this.mnuItemReporte.Text = "Reporte";
+            this.mnuItemReporte.Click += new System.EventHandler(this.regisToolStripMenuItem_Click);
             // 
             // windowsMenu
             // 
@@ -253,58 +258,99 @@ namespace Proyecto.Presentacion
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
+            this.lblLogged});
             this.statusStrip.Location = new System.Drawing.Point(0, 431);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(632, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
-            // toolStripStatusLabel
+            // lblLogged
             // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
-            this.toolStripStatusLabel.Text = "Status";
+            this.lblLogged.Name = "lblLogged";
+            this.lblLogged.Size = new System.Drawing.Size(39, 17);
+            this.lblLogged.Text = "Status";
             // 
-            // toolStrip1
+            // label1
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(632, 25);
-            this.toolStrip1.TabIndex = 4;
-            this.toolStrip1.Text = "toolStrip1";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Email :";
             // 
-            // toolStripButton1
+            // label2
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(36, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Password :";
             // 
-            // toolStripButton2
+            // btnLogin
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.btnLogin.Location = new System.Drawing.Point(39, 160);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 8;
+            this.btnLogin.Text = "Ingresar";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(212, 160);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(100, 58);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(187, 20);
+            this.txtEmail.TabIndex = 10;
+            // 
+            // txtClave
+            // 
+            this.txtClave.Location = new System.Drawing.Point(100, 95);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(187, 20);
+            this.txtClave.TabIndex = 11;
+            this.txtClave.TextChanged += new System.EventHandler(this.txtClave_TextChanged);
+            // 
+            // grpboxLogin
+            // 
+            this.grpboxLogin.Controls.Add(this.txtEmail);
+            this.grpboxLogin.Controls.Add(this.btnLogin);
+            this.grpboxLogin.Controls.Add(this.btnCancelar);
+            this.grpboxLogin.Controls.Add(this.txtClave);
+            this.grpboxLogin.Controls.Add(this.label1);
+            this.grpboxLogin.Controls.Add(this.label2);
+            this.grpboxLogin.Location = new System.Drawing.Point(150, 85);
+            this.grpboxLogin.Name = "grpboxLogin";
+            this.grpboxLogin.Size = new System.Drawing.Size(333, 244);
+            this.grpboxLogin.TabIndex = 12;
+            this.grpboxLogin.TabStop = false;
+            this.grpboxLogin.Text = "Login";
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 453);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.grpboxLogin);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
@@ -317,8 +363,8 @@ namespace Proyecto.Presentacion
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.grpboxLogin.ResumeLayout(false);
+            this.grpboxLogin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,7 +375,7 @@ namespace Proyecto.Presentacion
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel lblLogged;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tileHorizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewMenu;
@@ -347,14 +393,18 @@ namespace Proyecto.Presentacion
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem libroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem prestamoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem devolucionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem regisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemPrestamo;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemDevolucion;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemReporte;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.GroupBox grpboxLogin;
     }
 }
 

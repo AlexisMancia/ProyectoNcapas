@@ -66,6 +66,10 @@ namespace Proyecto.Negocio
             return Datos.Eliminar(Id);
         }
 
-
+        public DataTable Login(string Email,string Clave)
+        {
+            DPersona Datos = new DPersona();
+            return Datos.Login(Email, Clave);
+        }
     }
 }

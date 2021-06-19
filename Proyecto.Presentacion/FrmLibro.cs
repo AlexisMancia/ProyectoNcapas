@@ -13,7 +13,8 @@ namespace Proyecto.Presentacion
 {
     public partial class FrmLibro : Form
     {
- 
+
+        public string rol;
         public FrmLibro()
         {
             InitializeComponent();
@@ -97,6 +98,10 @@ namespace Proyecto.Presentacion
 
         private void FrmLibro_Load(object sender, EventArgs e)
         {
+            if (this.rol.Equals("Profesor"))
+            {
+                tabGeneral.Enabled = false;
+            }
             this.Listar();
         }
 
